@@ -2,20 +2,15 @@ server:
   port: 0
 spring:
   datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:shop;MODE=PostgreSQL
-    username: sa
-    password:
-  jpa:
-    show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
-  h2:
-    console:
-      enabled: true
-      settings:
-        web-allow-others: false
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: postgres
+    jpa:
+      show-sql: true
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQL94Dialect
   application:
     name: product-service
 eureka:
@@ -24,6 +19,6 @@ eureka:
     serviceUrl.defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:
     hostname: localhost
-flyway:
-  enabled: true
-  locations: classpath:common
+#flyway:
+#  enabled: true
+#  locations: classpath:common

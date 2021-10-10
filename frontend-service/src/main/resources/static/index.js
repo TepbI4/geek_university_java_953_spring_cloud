@@ -1,5 +1,5 @@
 angular.module('front-index',[]).controller('indexController', function($scope, $http) {
-    const contextPath = 'http://localhost:8289/api/v1/products'
+    const contextPath = 'http://localhost:5555/product-service/api/v1/products'
 
     $scope.loadProducts = function () {
         $http({
