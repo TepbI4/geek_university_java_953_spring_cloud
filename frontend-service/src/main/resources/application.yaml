@@ -3,9 +3,4 @@ spring:
     name: frontend-service
 server:
   port: 8289
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    serviceUrl.defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
 
